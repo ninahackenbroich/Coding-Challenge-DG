@@ -5,8 +5,9 @@ class EventsController < ApplicationController
     @restaurants = Restaurant.all
   end
 
-  def shuffle
-    all_groups = Array.new(@restaurants.length)
+  def new
+    restaurants = Restaurant.all
+    all_groups = Array.new(restaurants.size)
     
     units = Employee.all.group_by { |employee| employee.unit }
 
@@ -19,11 +20,11 @@ class EventsController < ApplicationController
     all_groups.each_with_index do |group, i|
       group.each do | employee |
         Event.new(
-          name: @restaurants.sample.name,
           employee: employee,
-          lunchgroup: all_groups[i]
+          group: group[i]
         )
       end
     end
-  @events = Event.all
+    @events = Event.all
+  end
 end
