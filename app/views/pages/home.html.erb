@@ -1,0 +1,17 @@
+<div id="container">
+  <div class="form-group">
+    <%= simple_form_for(@employee) do |f| %>
+      <br>
+      <%= f.label :name, "Type your name" %>
+      <%= f.text_field :name %>
+      <br>
+      <br>
+      <%= f.label :unit, "Which unit are you in?" %>
+      <%= f.input :unit, label: false, collection: ["HR", "IT", "Management", "Customer Service", "Marketing", "PR", "Operations", "Design"] %>
+      <br>
+      <br>
+      <%= f.submit "Find Table!", class: "btn btn-sm red-button shadow mb-5", disable_with: 'Submiting...' %>
+      <br>
+    <% end %>
+  </div>
+</div>
