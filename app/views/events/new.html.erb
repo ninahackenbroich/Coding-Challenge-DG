@@ -1,0 +1,44 @@
+<div class="container">
+  <h1>Find you new Lunchgroup</h1>
+
+  <div class="list-group-flex">
+    <div class="list-group-flex-1">
+      <ul class ="list-group">
+        <% for i in 0..9 do %>
+          <li class="list-group-item"><%= @events[i].lunchgroup.name %> | <%= @events[i].employee.name %> | <%= @events[i].employee.unit %></li>
+        <% end %>
+      </ul>
+    </div>
+    <div class="list-group-flex-2">
+      <ul class ="list-group">
+        <% for i in 10..19 do %>
+          <li class="list-group-item"><%= @events[i].lunchgroup.name %> | <%= @events[i].employee.name %> | <%= @events[i].employee.unit %></li>
+        <% end %>
+      </ul>
+    </div>
+
+    <div class="list-group-flex-3">
+      <ul class ="list-group">
+        <% for i in 20..29 do %>
+          <li class="list-group-item"><%= @events[i].lunchgroup.name %> | <%= @events[i].employee.name %> | <%= @events[i].employee.unit %></li>
+        <% end %>
+      </ul>
+    </div>
+    <div class="list-group-flex-4">
+      <ul class ="list-group">
+        <% for i in 30..39 do %>
+          <li class="list-group-item"><%= @events[i].lunchgroup.name %> | <%= @events[i].employee.name %> | <%= @events[i].employee.unit %></li>
+        <% end %>
+      </ul>
+    </div>
+    <div class="list-group-flex-5">
+      <ul class ="list-group">
+        <% for i in 40..49 do %>
+          <li class="list-group-item"><%= @events[i].lunchgroup.name %> | <%= @events[i].employee.name %> | <%= @events[i].employee.unit %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+
+  <%= link_to "Find your group!", root_path, class: "btn btn-lg red-button" %>
+</div>
